@@ -1,7 +1,7 @@
-# Flesch–Kincaid readability tests
+# Readability tests
 
-[![Build Status](https://travis-ci.org/ernestas-poskus/kincaid.svg)](https://travis-ci.org/ernestas-poskus/kincaid)
-[![GoDoc](http://godoc.org/github.com/ernestas-poskus/kincaid?status.svg)](http://godoc.org/github.com/ernestas-poskus/kincaid)
+[![Build Status](https://travis-ci.org/ernestas-poskus/readability-tests.svg)](https://travis-ci.org/ernestas-poskus/readability-tests)
+[![GoDoc](http://godoc.org/github.com/ernestas-poskus/readability-tests?status.svg)](http://godoc.org/github.com/ernestas-poskus/readability-tests)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 
