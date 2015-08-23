@@ -1,18 +1,7 @@
-package kincaid
+package readability
 
 import (
 	"github.com/ernestas-poskus/syllables"
-)
-
-// Constants for Flesch Kincaid formulas
-const (
-	REfirst  = 206.835
-	REsecond = 1.015
-	REthird  = 84.6
-
-	GLfirst  = 0.39
-	GLsecond = 11.8
-	GLthird  = 15.59
 )
 
 // FleschReadingEase - test, higher scores indicate material that is easier to read;
@@ -29,7 +18,7 @@ func FleschReadingEase(text []byte) float64 {
 	sentences := float64(SentenceCount(text))
 	syllables := float64(syllables.CountSyllablesInText(words))
 
-	return REfirst - REsecond*(wordsCount/sentences) - REthird*(syllables/wordsCount)
+	return 206.835 - 1.015*(wordsCount/sentences) - 84.6*(syllables/wordsCount)
 }
 
 // FleschGradeLevel - readability tests are used extensively in the field of education
@@ -42,5 +31,5 @@ func FleschGradeLevel(text []byte) float64 {
 	sentences := float64(SentenceCount(text))
 	syllables := float64(syllables.CountSyllablesInText(words))
 
-	return GLfirst*(wordsCount/sentences) + GLsecond*(syllables/wordsCount) - GLthird
+	return 0.39*(wordsCount/sentences) + 11.8*(syllables/wordsCount) - 15.59
 }

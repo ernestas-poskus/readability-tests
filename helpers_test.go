@@ -1,4 +1,4 @@
-package kincaid
+package readability
 
 import "testing"
 
