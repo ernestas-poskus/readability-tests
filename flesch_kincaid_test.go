@@ -12,7 +12,7 @@ func TestFleschReadingEase(t *testing.T) {
 	for sentence, expected := range fleschReadingEaseTest {
 		got := fmt.Sprintf("%.2f", FleschReadingEase([]byte(sentence)))
 		if got != expected {
-			t.Errorf("Expected %f got %s", expected, got)
+			t.Errorf("Expected %s got %s", expected, got)
 		}
 	}
 }
@@ -24,7 +24,7 @@ func TestFleschGradeLevel(t *testing.T) {
 	for sentence, expected := range fleschGradeLevelTest {
 		got := fmt.Sprintf("%.2f", FleschGradeLevel([]byte(sentence)))
 		if got != expected {
-			t.Errorf("Expected %f got %s", expected, got)
+			t.Errorf("Expected %s got %s", expected, got)
 		}
 	}
 }
