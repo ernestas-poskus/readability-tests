@@ -10,11 +10,15 @@ Flesch Reading Ease test
 
 Higher scores indicate material that is easier to read; lower numbers mark passages that are more difficult to read.
 
-| Score | Notes |
-| ----- | ----- |
-| 90.0–100.0 | easily understood by an average 11-year-old student |
-| 60.0–70.0 | easily understood by 13- to 15-year-old students |
-| 0.0–30.0 | best understood by university graduates |
+| Score | Grade |
+| ----- | ------|
+| 90-100 | Very Easy |
+| 80-89 | Easy |
+| 70-79 | Fairly Easy |
+| 60-69 | Standard |
+| 50-59 | Fairly Difficult |
+| 30-49 | Difficult |
+| 0-29 | Very Confusing |
 
 Flesch–Kincaid Grade Level
 -------------------
@@ -22,6 +26,12 @@ Flesch–Kincaid Grade Level
 These readability tests are used extensively in the field of education.
 The "Flesch–Kincaid Grade Level Formula" instead presents a score as a U.S. grade level,
 making it easier for teachers, parents, librarians, and others to judge the readability level of various books and texts.
+
+| Score | Notes |
+| ----- | ----- |
+| 90.0–100.0 | easily understood by an average 11-year-old student |
+| 60.0–70.0 | easily understood by 13- to 15-year-old students |
+| 0.0–30.0 | best understood by university graduates |
 
 Automated Readability Index
 --------------------
