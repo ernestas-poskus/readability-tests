@@ -10,7 +10,7 @@ var wordsCountTest = map[string]int{
 
 func TestWordsCount(t *testing.T) {
 	for word, expectedWordsCount := range wordsCountTest {
-		got := WordsCount(SplitTextToWords([]byte(word)))
+		got := WordsCount(SplitTextWords([]byte(word)))
 		if got != expectedWordsCount {
 			t.Errorf("Expected %d got %d", expectedWordsCount, got)
 		}
@@ -28,6 +28,39 @@ func TestSentenceCount(t *testing.T) {
 		got := SentenceCount([]byte(sentence))
 		if got != expectedSentenceCount {
 			t.Errorf("Expected %d got %d", expectedSentenceCount, got)
+		}
+	}
+}
+
+var characterCountTests = []struct {
+	input    string
+	expected int
+}{
+	{"aoms", 4},
+	{"šeimeną", 7},
+}
+
+func TestCharacterCount(t *testing.T) {
+	for _, test := range characterCountTests {
+		got := CharacterCount([]byte(test.input))
+		if got != test.expected {
+			t.Errorf("Expected %d character count for %s, got %d", test.expected, test.input, got)
+		}
+	}
+}
+
+var alphaTests = []struct {
+	input    string
+	expected string
+}{
+	{"(Dale and Chall, 1948)", "Dale and Chall 1948"},
+}
+
+func TestAlpha(t *testing.T) {
+	for _, test := range alphaTests {
+		got := string(Alpha([]byte(test.input)))
+		if got != test.expected {
+			t.Errorf("Expected %s, got %s", test.expected, got)
 		}
 	}
 }

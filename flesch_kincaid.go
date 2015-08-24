@@ -10,7 +10,7 @@ import (
 // 60.0–70.0	easily understood by 13- to 15-year-old students
 // 0.0–30.0	best understood by university graduates
 func FleschReadingEase(text []byte) float64 {
-	words := SplitTextToWords(text)
+	words := SplitTextWords(text)
 	wordsCount := float64(WordsCount(words))
 	if wordsCount == 0 {
 		return 0
@@ -23,7 +23,7 @@ func FleschReadingEase(text []byte) float64 {
 
 // FleschGradeLevel - readability tests are used extensively in the field of education
 func FleschGradeLevel(text []byte) float64 {
-	words := SplitTextToWords(text)
+	words := SplitTextWords(text)
 	wordsCount := float64(WordsCount(words))
 	if wordsCount == 0 {
 		return 0
